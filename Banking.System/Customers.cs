@@ -19,7 +19,7 @@ namespace Bank_Application
         private string myAccountType;
         private int myBalance;
 
-        public Customers(string firstName, string lastName, string emailAddress, string password, string accountType, int accountNumber, int balance)
+        /*public Customers(string firstName, string lastName, string emailAddress, string password, string accountType, int accountNumber, int balance)
         {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -28,7 +28,7 @@ namespace Bank_Application
             this.accountType = accountType;
             this.accountNumber = accountNumber;
             this.balance = balance;
-        }
+        }*/
 
         public Customers(string firstName, string lastName, string emailAddress, string password, int myAccoutNumber, string myAccountType, int myBalance)
         {

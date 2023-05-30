@@ -29,7 +29,7 @@ namespace Bank_Application
                 Console.Clear();
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("       WELLCOME            ");
+                Console.WriteLine("                   WELLCOME                  ");
                 Console.WriteLine("Wellcome to \"Kennis Bank\" the people's bank");
                 Console.WriteLine();
                 Console.ResetColor();
@@ -57,8 +57,64 @@ namespace Bank_Application
                 Console.WriteLine("Customer added successfully");
                 Console.WriteLine("Please do you want to continue (Yes/No");
                 string choice= Console.ReadLine();
-            }
+
+                if(choice.Equals("No", StringComparison.OrdinalIgnoreCase))
+                    exit = true;
+                Console.Clear();
+
+                Console.WriteLine();
+                Console.WriteLine("|-----------------------|");
+                Console.WriteLine("|  YOUR ACCOUNT DETAILS |");
+                Console.WriteLine("|-----------------------|");
+                Console.WriteLine();
+
+                foreach(var cust in customers)
+                {
+                    Console.WriteLine($"firstName:{cust.firstName}");
+                    Console.WriteLine($"lastName:{cust.lastName}");
+                    Console.WriteLine($"fullName:{cust.firstName}:{cust.lastName}");
+                    Console.WriteLine($"emailAddres:{cust.emailAddress}");
+                    Console.WriteLine($"accountNumber:{cust.accountNumber}");
+                    Console.WriteLine($"accontType:{cust.accountType}");
+                    Console.WriteLine($"accountBalance:{cust.balance}");
+                    
+                }
+
+                Console.WriteLine("Your registration is successfull");
+                
+                promptForLogin();
+                
+            }   
+            
         }
+        private void promptForLogin()
+        {
+            Console.WriteLine("Would you like to login? Yes or No");
+            string loginChoice= Console.ReadLine();
+
+            if (loginChoice.Equals("No", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine("Thank you for banking with us");
+            }
+            else if(loginChoice.Equals("Yes", StringComparison.OrdinalIgnoreCase))
+            {
+                string loginInput;
+                do
+                {
+                    Console.WriteLine("Please enter '3' to log in:");
+                    loginInput = Console.ReadLine();
+                } while (loginInput != "3");
+                var login = new Login();
+                login.LoginFunction();
+            }
+
+            
+        }
+        
+            
+           
+
+        
 
 
 
