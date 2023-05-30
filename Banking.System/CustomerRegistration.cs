@@ -79,17 +79,17 @@ namespace Bank_Application
                 Console.WriteLine("|-----------------------|");
                 Console.WriteLine();
 
-                /*foreach(var cust in customers)
+                foreach(var cust in customers)
                 {
-                    Console.WriteLine($"firstName:{cust.firstName}");
-                    Console.WriteLine($"lastName:{cust.lastName}");
-                    Console.WriteLine($"fullName:{cust.firstName}:{cust.lastName}");
-                    Console.WriteLine($"emailAddres:{cust.emailAddress}");
-                    Console.WriteLine($"accountNumber:{cust.accountNumber}");
-                    Console.WriteLine($"accontType:{cust.accountType}");
-                    Console.WriteLine($"accountBalance:{cust.balance}");
+                    Console.WriteLine($"firstName:{cust.FirstName}");
+                    Console.WriteLine($"lastName:{cust.LastName}");
+                    Console.WriteLine($"fullName:{cust.FirstName}:{cust.LastName}");
+                    Console.WriteLine($"emailAddres:{cust.Email}");
+                    Console.WriteLine($"accountNumber:{cust.AccountNumber}");
+                    Console.WriteLine($"accontType:{cust.AccountType}");
+                    Console.WriteLine($"accountBalance:{cust.Balance}");
                     
-                }*/
+                }
 
                 Console.WriteLine("Your registration is successfull");
                 
