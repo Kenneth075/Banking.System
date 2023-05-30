@@ -8,7 +8,26 @@ namespace Bank_Application
 {
     internal class Customers
     {
-        public string firstName;
+            public string FirstName;
+            public string LastName;
+            public string Email;
+            public string Password;
+            public int AccountNumber;
+            public string AccountType;
+            public int Balance;
+
+            public Customers(string FirstName, string LastName, string Email, string Password, int AccountNumber, string AccountType, int Balance)
+            {
+                this.FirstName = FirstName;
+                this.LastName = LastName;
+                this.Email = Email;
+                this.Password = Password;
+                this.AccountNumber = AccountNumber;
+                this.AccountType = AccountType;
+                this.Balance = Balance;
+            }
+        }
+        /*public string firstName;
         public string lastName;
         public string emailAddress;
         public string password;
@@ -30,7 +49,7 @@ namespace Bank_Application
             this.balance = balance;
         }*/
 
-        public Customers(string firstName, string lastName, string emailAddress, string password, int myAccoutNumber, string myAccountType, int myBalance)
+        /*public Customers(string firstName, string lastName, string emailAddress, string password, int myAccoutNumber, string myAccountType, int myBalance)
         {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -39,7 +58,6 @@ namespace Bank_Application
             this.myAccoutNumber = myAccoutNumber;
             this.myAccountType = myAccountType;
             this.myBalance = myBalance;
-        }
+        }*/
     }
 
-}

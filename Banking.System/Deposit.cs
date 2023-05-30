@@ -25,21 +25,21 @@ namespace Bank_Application
 
             foreach (var item in customers)
             {
-                if (item.balance != null)
+                if (item.Balance != null)
                 {
-                    item.balance += Amount;
-                    Console.WriteLine($"Your new balance is: {item.balance}");
+                    item.Balance += Amount;
+                    Console.WriteLine($"Your new balance is: {item.Balance}");
                     Console.WriteLine();
                     Console.WriteLine("SEE YOUR UPDATES BELOW");
 
 
-                    Console.WriteLine($"FirstName: {item.firstName}");
-                    Console.WriteLine($"LastName: {item.lastName}");
-                    Console.WriteLine($"Fullname: {item.firstName} {item.lastName}");
-                    Console.WriteLine($"Email: {item.emailAddress}");
-                    Console.WriteLine($"AccountNumber: {item.accountNumber}");
-                    Console.WriteLine($"AccountType: {item.accountType}");
-                    Console.WriteLine($"Balance: {item.balance}");
+                    Console.WriteLine($"FirstName: {item.FirstName}");
+                    Console.WriteLine($"LastName: {item.LastName}");
+                    Console.WriteLine($"Fullname: {item.FirstName} {item.LastName}");
+                    Console.WriteLine($"Email: {item.Email}");
+                    Console.WriteLine($"AccountNumber: {item.AccountNumber}");
+                    Console.WriteLine($"AccountType: {item.AccountType}");
+                    Console.WriteLine($"Balance: {item.Balance}");
                 }
 
 

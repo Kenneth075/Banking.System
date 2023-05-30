@@ -8,7 +8,7 @@ namespace Bank_Application.Accounts
 {
     internal class CurrentAccount
     {
-        public int CurrentNumber()
+        public long CurrentNumber()
         {
             Random random = new Random();
             var currentAccountNumber = random.Next(1000000000, 1999999999);

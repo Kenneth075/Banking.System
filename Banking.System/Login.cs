@@ -24,18 +24,25 @@ namespace Bank_Application
 
             foreach(var items in customers)
             {
-                if (loginEmail == items.emailAddress)
+                if (loginEmail == items.Email)
                 {
                     Console.WriteLine("Enter your password");
                     loginpassword = Console.ReadLine();
 
-                    if(loginpassword == items.password)
+                    if(loginpassword == items.Password)
                     {
                         Console.Clear();
                         var bankmemu = new BankMenu();
                         bankmemu.BankMenuFunction();
-
                     }
+                    else
+                    {
+                        LoginFunction();
+                    }
+                }
+                else
+                {
+                    LoginFunction();
                 }
             }
         }

@@ -19,7 +19,6 @@ namespace Bank_Application
             var Validateemail = new ValidateEmailAddress();
             var Validatepassword = new ValidatePassword();
             var OpenAccount = new AccountChoice();
-            var AccountType= new AccountChoice();
             var AccountBalance = new Balance();
 
             bool exit = false;
@@ -32,8 +31,6 @@ namespace Bank_Application
                 Console.WriteLine("                   WELLCOME                  ");
                 Console.WriteLine("Wellcome to \"Kennis Bank\" the people's bank");
                 Console.WriteLine();
-                Console.ResetColor();
-                Console.WriteLine();
                 Console.WriteLine("Please kindly enter your details below to register");
                 Console.WriteLine();
 
@@ -45,13 +42,27 @@ namespace Bank_Application
                 Console.WriteLine();
                 var password = Validatepassword.ValidPasswordCollector();
                 Console.WriteLine();
+                var accountNumber = OpenAccount.AccountNumber();
+                Console.WriteLine();
+                var myAccountType = OpenAccount.AccountType();
+                Console.WriteLine();
+                var myBalance = AccountBalance.balancefunction();
+
+                /*var firstName = ValidatefirstName.FirstNameCollector();
+                Console.WriteLine();
+                var lastName = ValidatelastName.LastNameCollector();
+                Console.WriteLine();
+                var emailAddress = Validateemail.EmailAddressCollector();
+                Console.WriteLine();
+                var password = Validatepassword.ValidPasswordCollector();
+                Console.WriteLine();
                 var myAccoutNumber = OpenAccount.AccountNumber();
                 Console.WriteLine();
                 var myAccountType = AccountType.AccountType();
                 Console.WriteLine();
-                var myBalance = AccountBalance.balancefunction();
+                var myBalance = AccountBalance.balancefunction();*/
 
-                Customers customer= new Customers(firstName, lastName, emailAddress,password, myAccoutNumber,myAccountType,myBalance);
+                Customers customer = new Customers(firstName, lastName, emailAddress, password, accountNumber, myAccountType, myBalance);
                 customers.Add(customer);
 
                 Console.WriteLine("Customer added successfully");
@@ -68,7 +79,7 @@ namespace Bank_Application
                 Console.WriteLine("|-----------------------|");
                 Console.WriteLine();
 
-                foreach(var cust in customers)
+                /*foreach(var cust in customers)
                 {
                     Console.WriteLine($"firstName:{cust.firstName}");
                     Console.WriteLine($"lastName:{cust.lastName}");
@@ -78,7 +89,7 @@ namespace Bank_Application
                     Console.WriteLine($"accontType:{cust.accountType}");
                     Console.WriteLine($"accountBalance:{cust.balance}");
                     
-                }
+                }*/
 
                 Console.WriteLine("Your registration is successfull");
                 
