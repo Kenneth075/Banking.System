@@ -10,7 +10,7 @@ namespace Bank_Application
 {
     internal class CustomerRegistration
     {
-        public static List<CustomerRegistration> customers = new List<CustomerRegistration>();
+        public static List<Customers> customers = new List<Customers>();
 
         public void CustomerFunction()
         {
@@ -19,6 +19,7 @@ namespace Bank_Application
             var Validateemail = new ValidateEmailAddress();
             var Validatepassword = new ValidatePassword();
             var OpenAccount = new AccountChoice();
+            var AccountType= new AccountChoice();
             var AccountBalance = new Balance();
 
             bool exit = false;
@@ -46,9 +47,16 @@ namespace Bank_Application
                 Console.WriteLine();
                 var myAccoutNumber = OpenAccount.AccountNumber();
                 Console.WriteLine();
-                var myAccountType = OpenAccount.AccountType();
+                var myAccountType = AccountType.AccountType();
                 Console.WriteLine();
                 var myBalance = AccountBalance.balancefunction();
+
+                Customers customer= new Customers(firstName, lastName, emailAddress,password, myAccoutNumber,myAccountType,myBalance);
+                customers.Add(customer);
+
+                Console.WriteLine("Customer added successfully");
+                Console.WriteLine("Please do you want to continue (Yes/No");
+                string choice= Console.ReadLine();
             }
         }
 

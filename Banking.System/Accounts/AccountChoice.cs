@@ -46,8 +46,9 @@ namespace Bank_Application.Accounts
             }
             else
             {
-                throw new ArgumentException("Invalid Choice, Please enter a valid account number")
+                throw new ArgumentException("Invalid Choice, Please enter a valid account number");
             }
+            
 
         }
         
