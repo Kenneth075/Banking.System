@@ -21,13 +21,13 @@ namespace Bank_Application
             Console.WriteLine();
             Console.WriteLine("1. CREATE MORE ACCOUNT");
             Console.WriteLine();
-            Console.WriteLine("2. CHECK ACCOUNT BALANCE");
+            Console.WriteLine("2. MAKE A DEPOSIT");
             Console.WriteLine();
-            Console.WriteLine("3. MAKE A DEPOSIT");
+            Console.WriteLine("3. MAKE A WITHDRAWAL");
             Console.WriteLine();
-            Console.WriteLine("4. MAKE A WITHDRAWAL");
+            Console.WriteLine("4. MAKE A TRANSFER");
             Console.WriteLine();
-            Console.WriteLine("5. MAKE A TRANSFER");
+            Console.WriteLine("5. GET ACCOUNT DETAILS");
             Console.WriteLine();
             Console.WriteLine("6. GET STATEMENT OF ACCOUNTS");
             Console.WriteLine();
@@ -45,24 +45,26 @@ namespace Bank_Application
 
                     break;
                 case "2":
-                    Console.Write("YOU SELECTED CHECK ACCOUNT BALANCE.");
-
-
-                    break;
-                case "3":
                     Console.Write("YOU SELCECTED MAKE A DEPOSIT.");
                     var deposit = new Deposit();
                     deposit.depositFunction();
 
                     break;
-                case "4":
+                case "3":
                     Console.Write("YOU SELECTED MAKE A WITHDRAWAL.");
                     var withdrawal = new Withdraw();
                     withdrawal.withdrawFunction();
 
                     break;
-                case "5":
+                case "4":
                     Console.Write("YOU SELECTED MAKE A TRANSFER.");
+                    
+
+                    break;
+                case "5":
+                    Console.Write(" YOU SELECTED ACCOUNT DETAILS.");
+                    var display = new DisplayTable();
+                    display.DisplayAllTable();
 
                     break;
                 case "6":
