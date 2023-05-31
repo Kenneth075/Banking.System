@@ -26,8 +26,6 @@ namespace Bank_Application
             while (!exit)
             {
                 Console.Clear();
-                Console.WriteLine();
-                Console.WriteLine("                   WELLCOME                  ");
                 Console.WriteLine("Wellcome to Kennis Bank the people's bank");
                 Console.WriteLine();
                 Console.WriteLine("Please enter your details below to register");
