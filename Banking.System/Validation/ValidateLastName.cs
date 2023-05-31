@@ -12,12 +12,12 @@ namespace Bank_Application.Validation
         {
             while (true)
             {
-                Console.WriteLine("Please your lasttname starting with an uppercase");
+                Console.WriteLine("Please your lastname most begin with an uppercase");
                 string LastName = Console.ReadLine();
 
                 if (!char.IsUpper(LastName[0]))
                 {
-                    Console.WriteLine("Please enter your name begin with uppercase");
+                    Console.WriteLine("Please enter your lastname begin with uppercase");
                 }
 
                 if (char.IsDigit(LastName[0]))

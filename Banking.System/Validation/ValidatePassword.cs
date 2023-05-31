@@ -22,7 +22,7 @@ namespace Bank_Application.Validation
             while (!Regex.IsMatch(password, passwordPattern))
             {
                 Console.WriteLine("Please enter a valid password! Try again.");
-                Console.WriteLine("Enter Password " +
+                Console.WriteLine("Enter Password" +
                 "\n Password should be minimum 6 characters" +
                 "\n  that include alphanumeric and" +
                 "\n  at least one special characters(@, #, $, %, ^, &, !)");

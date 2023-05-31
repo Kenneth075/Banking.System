@@ -27,11 +27,10 @@ namespace Bank_Application
             {
                 Console.Clear();
                 Console.WriteLine();
-                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("                   WELLCOME                  ");
-                Console.WriteLine("Wellcome to \"Kennis Bank\" the people's bank");
+                Console.WriteLine("Wellcome to Kennis Bank the people's bank");
                 Console.WriteLine();
-                Console.WriteLine("Please kindly enter your details below to register");
+                Console.WriteLine("Please enter your details below to register");
                 Console.WriteLine();
 
                 var firstName = ValidatefirstName.FirstNameCollector();
@@ -48,25 +47,12 @@ namespace Bank_Application
                 Console.WriteLine();
                 var myBalance = AccountBalance.balancefunction();
 
-                /*var firstName = ValidatefirstName.FirstNameCollector();
-                Console.WriteLine();
-                var lastName = ValidatelastName.LastNameCollector();
-                Console.WriteLine();
-                var emailAddress = Validateemail.EmailAddressCollector();
-                Console.WriteLine();
-                var password = Validatepassword.ValidPasswordCollector();
-                Console.WriteLine();
-                var myAccoutNumber = OpenAccount.AccountNumber();
-                Console.WriteLine();
-                var myAccountType = AccountType.AccountType();
-                Console.WriteLine();
-                var myBalance = AccountBalance.balancefunction();*/
-
+            
                 Customers customer = new Customers(firstName, lastName, emailAddress, password, accountNumber, myAccountType, myBalance);
                 customers.Add(customer);
 
                 Console.WriteLine("Customer added successfully");
-                Console.WriteLine("Please do you want to continue (Yes/No");
+                Console.WriteLine("Please do you want to continue (Yes/No)");
                 string choice= Console.ReadLine()!;
 
                 if(choice.Equals("No", StringComparison.OrdinalIgnoreCase))
