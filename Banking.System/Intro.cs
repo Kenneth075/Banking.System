@@ -13,7 +13,6 @@ namespace Bank_Application
             Console.WriteLine("|--------------------------------------------|");
             Console.WriteLine("|    YOU'RE WELCOME TO KENNIS CONSOLE BANK   |");
             Console.WriteLine("|--------------------------------------------|");
-            Console.WriteLine();
 
             bool isRunning = true;
 
@@ -32,24 +31,20 @@ namespace Bank_Application
                     case "1":
                         var registration = new CustomerRegistration();
                         registration.CustomerFunction();
-
                         break;
                     case "2":
                         var login = new Login();
                         login.LoginFunction();
-
                         break;
                     case "3":
-
                         break;
                     default:
                         Console.WriteLine("Invalid choice. Please try again.");
                         break;
                 }
 
-                Console.WriteLine();
+               
             }
-
             Console.WriteLine("Thank you for using Kennis Console Bank App. Goodbye!");
         }
     }

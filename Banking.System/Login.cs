@@ -13,11 +13,11 @@ namespace Bank_Application
 
         public void LoginFunction()
         {
-            Console.WriteLine();
-            Console.WriteLine("|--------------|");
-            Console.WriteLine("|   Login      |");
-            Console.WriteLine("|--------------|");
-            Console.WriteLine();
+            
+            Console.WriteLine("|--------------------|");
+            Console.WriteLine("|     Please Login   |");
+            Console.WriteLine("|--------------------|");
+           
 
             Console.WriteLine("Enter your email address");
             loginEmail = Console.ReadLine();

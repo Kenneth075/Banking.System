@@ -44,7 +44,7 @@ namespace Bank_Application
 
 
             }
-            Console.WriteLine("---------------------------------------------------------------");
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Eneter 1 to go back to BankMenu");
             string choice = Console.ReadLine()!;
             if (choice == "1")

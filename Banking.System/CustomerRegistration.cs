@@ -67,7 +67,7 @@ namespace Bank_Application
 
                 Console.WriteLine("Customer added successfully");
                 Console.WriteLine("Please do you want to continue (Yes/No");
-                string choice= Console.ReadLine();
+                string choice= Console.ReadLine()!;
 
                 if(choice.Equals("No", StringComparison.OrdinalIgnoreCase))
                     exit = true;
@@ -101,7 +101,7 @@ namespace Bank_Application
         private void promptForLogin()
         {
             Console.WriteLine("Would you like to login? Yes or No");
-            string loginChoice= Console.ReadLine();
+            string loginChoice= Console.ReadLine()!;
 
             if (loginChoice.Equals("No", StringComparison.OrdinalIgnoreCase))
             {
@@ -113,7 +113,7 @@ namespace Bank_Application
                 do
                 {
                     Console.WriteLine("Please enter '3' to log in:");
-                    loginInput = Console.ReadLine();
+                    loginInput = Console.ReadLine()!;
                 } while (loginInput != "3");
                 var login = new Login();
                 login.LoginFunction();
