@@ -21,7 +21,7 @@ namespace Bank_Application.Accounts
 
             if(choice == "1")
             {
-                accountNumber = random.Next(1000000000,1999999999);
+                accountNumber = random.Next(0000000001,1999999999);
             }
             else if(choice == "2")
             {

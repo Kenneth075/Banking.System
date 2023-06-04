@@ -11,7 +11,7 @@ namespace Bank_Application.Accounts
         public long SavingsNumber()
         {
             Random random = new Random();
-            var SavingsAccountNumber = random.Next(1000000000, 1999999999);
+            var SavingsAccountNumber = random.Next(0000000001, 1999999999);
             return SavingsAccountNumber;
         }
     }
