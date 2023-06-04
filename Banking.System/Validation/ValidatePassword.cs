@@ -14,9 +14,7 @@ namespace Bank_Application.Validation
             string passwordPattern = @"^(?=.*[@#$%^&!])(?=.*[a-zA-Z0-9]).{6,}$";
 
             Console.WriteLine("Enter Password " +
-                "\n Password should be minimum 6 characters" +
-                "\n  that include alphanumeric and" +
-                "\n  at least one special characters(@, #, $, %, ^, &, !)");
+                "\n Password should be minimum 6 characters that include alphanumeric and at least one special characters");
             string password = Console.ReadLine()!;
 
             while (!Regex.IsMatch(password, passwordPattern))

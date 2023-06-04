@@ -9,11 +9,15 @@ namespace Bank_Application.Validation
 {
     internal class ValidateEmailAddress
     {
+        public bool IsValidEmail(string email)
+        {
+            return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+        }
         public string EmailAddressCollector()
         {
             while (true)
             {
-                Console.WriteLine("Please enter your email address");
+                Console.Write("Please enter your email address: ");
                 string email = Console.ReadLine();
 
                 if (!IsValidEmail(email))
@@ -24,9 +28,6 @@ namespace Bank_Application.Validation
                 return email;
             }
         }
-        public bool IsValidEmail(string email)
-        {
-            return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-        }
+       
     }
 }
